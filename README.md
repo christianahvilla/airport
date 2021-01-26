@@ -1,3 +1,36 @@
+# Airport
+Airport is a laravel application to handle data from an DB.
+
+### Built With
+* [Laravel](https://laravel.com/) - Laravel is a web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.
+
+* [Faker](https://github.com/fzaninotto/Faker) - Faker is a PHP library that generates fake data for you. Whether you need to bootstrap your database, create good-looking XML documents, fill-in your persistence to stress test it, or anonymize data taken from a production service, Faker is for you.
+
+* [Dcoker](https://www.docker.com/) - We help developers and development teams build and ship apps.
+
+### Prerequisites
+* PHP 7.4
+* Composer 1.10.19
+* Docker 20.10.2
+
+### Installing
+* Clone or download repo.
+* Run composer install.
+* Run ./vendor/bin/sail up
+* Modify ENV variables for db connection on .env file
+* Run php artisan key:generate
+* Run php artisan migrate
+* Run php artisan db:seed
+
+### Author
+
+* **Christian Alejandro Herrejon Villa** - *Full Stack Developer* - [Apex Systems](https://www.intersysconsulting.com/)
+
+### License
+
+This project is licensed under the GNU License - see the LICENSE file for details
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
