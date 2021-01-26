@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\FlightController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['prefix' => '/flights'], function () {
+    Route::get('/', [FlightController::class, 'index']);
+    Route::get('/origin', [FlightController::class, 'getOrigin']);
+    Route::get('/destiny/{origin}', [FlightController::class, 'getDestiny']);
+    Route::get('/time/{origin}/{destiny}', [FlightController::class, 'getTime']);
 });

@@ -1,0 +1,100 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Airport API",
+        "description": "",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/flights": {
+            "get": {
+                "tags": [
+                    "Flights"
+                ],
+                "summary": "Display flights",
+                "operationId": "App\\Http\\Controllers\\FlightController::index",
+                "responses": {
+                    "200": {
+                        "description": "Display all flights"
+                    },
+                    "500": {
+                        "description": "Something when wrong"
+                    }
+                }
+            }
+        },
+        "/api/flights/origin": {
+            "get": {
+                "tags": [
+                    "Flights"
+                ],
+                "summary": "Display origins",
+                "operationId": "App\\Http\\Controllers\\FlightController::getOrigin",
+                "responses": {
+                    "200": {
+                        "description": "Display all origins"
+                    },
+                    "500": {
+                        "description": "Something when wrong"
+                    }
+                }
+            }
+        },
+        "/api/flights/destiny/{origin}": {
+            "get": {
+                "tags": [
+                    "Flights"
+                ],
+                "summary": "Display destinies",
+                "operationId": "App\\Http\\Controllers\\FlightController::getDestiny",
+                "parameters": [
+                    {
+                        "name": "origin",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Display all destinies"
+                    },
+                    "500": {
+                        "description": "Something when wrong"
+                    }
+                }
+            }
+        },
+        "/api/flights/time/{origin}/{destiny}": {
+            "get": {
+                "tags": [
+                    "Flights"
+                ],
+                "summary": "Display times",
+                "operationId": "App\\Http\\Controllers\\FlightController::getTime",
+                "parameters": [
+                    {
+                        "name": "origin",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "name": "destiny",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Display all times"
+                    },
+                    "500": {
+                        "description": "Something when wrong"
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}
