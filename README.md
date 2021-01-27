@@ -22,6 +22,10 @@ Airport is a laravel application to handle data from an DB.
 * Run php artisan migrate
 * Run php artisan db:seed
 
+### View Swagger
+* Run php artisan l5-swagger:generate
+* Open on your browser http://localhost/api/documentation
+
 ### Author
 
 * **Christian Alejandro Herrejon Villa** - *Full Stack Developer* - [Apex Systems](https://www.intersysconsulting.com/)
